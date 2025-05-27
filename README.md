@@ -5,9 +5,10 @@ of software. On Windows, you can enable and install Windows Subsystem
 for Linux (WSL), see <https://learn.microsoft.com/en-us/windows/wsl/install>
 for instructions. The default Ubuntu distribution is fine.
 
-Partial installation of software is also possible using `conda` on
+Installation of (some) software is also possible using `conda` on
 Windows. See:
 <https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html>.
+
 To install `miniforge` using `winget`:
 
 ~~~powershell
@@ -21,7 +22,7 @@ However, WSL is recommended.
 -  <https://www.opengeosys.org/docs/userguide/basics/5-mins-ogs/>
 -  <https://github.com/pmgbergen/porepy>
 
-### Installation
+### Installation options
 
 #### pip
 
@@ -33,7 +34,7 @@ python3 -m venv .venv
 ~~~
 
 ~~~bash
-.venv/bin/pip install ogstools git+https://github.com/pmgbergen/porepy.git@76d11493e7c62269d03406bd736e1ddded85b517
+.venv/bin/pip install 'ogstools[ogs]' jupyterlab git+https://github.com/pmgbergen/porepy.git@76d11493e7c62269d03406bd736e1ddded85b517
 ~~~
 
 To activate environment:
@@ -44,7 +45,7 @@ source .venv/bin/activate
 
 #### conda
 
-It is recommended to create a new conda environment for
+It is recommended to create a new `conda` environment for
 `conda` installation.
 
 ~~~bash
