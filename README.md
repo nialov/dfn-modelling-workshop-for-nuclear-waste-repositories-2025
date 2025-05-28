@@ -64,3 +64,14 @@ pip install git+https://github.com/pmgbergen/porepy.git@76d11493e7c62269d03406bd
 ## GemPy
 
 -  <https://www.gempy.org/>
+
+### Installation options
+
+#### Using Google Colab
+
+The examples can be run in the cloud using Google Colab. Consequently, Only
+a Google account is required to access Colab.
+
+#### Local installation
+
+- See: <https://docs.gempy.org/installation.html#>
