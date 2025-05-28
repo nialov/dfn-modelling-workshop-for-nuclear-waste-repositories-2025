@@ -1,5 +1,8 @@
 # DFN Modelling Workshop for Nuclear Waste Repositories – 3rd – 5th of June 2025, RWTH Aachen University
 
+Please make issues and pull requests here regarding the instructions and
+problems, especially those who will hold hackathons and demo your software.
+
 ## Preliminary requirements
 
 ### WSL
