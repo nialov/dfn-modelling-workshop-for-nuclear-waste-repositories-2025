@@ -1,15 +1,27 @@
 # DFN Modelling Workshop for Nuclear Waste Repositories – 3rd – 5th of June 2025, RWTH Aachen University
 
+## Preliminary requirements
+
+### WSL
+
 It is recommended to have a Linux environment available for installation
 of software. On Windows, you can enable and install Windows Subsystem
 for Linux (WSL), see <https://learn.microsoft.com/en-us/windows/wsl/install>
 for instructions. The default Ubuntu distribution is fine.
+
+### Conda
 
 Installation of (some) software is also possible using `conda` on
 Windows. See:
 <https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html>.
 
 To install `miniforge` using `winget`:
+
+### Google Colab
+
+A Google account is require to access Google Colab
+(<https://colab.research.google.com/>) which can be used as a cloud computing
+platform for scientific (Python) applications.
 
 ~~~powershell
 winget install CondaForge.Miniforge3 --source winget
@@ -63,7 +75,7 @@ pip install git+https://github.com/pmgbergen/porepy.git@76d11493e7c62269d03406bd
 
 ## GemPy
 
--  <https://www.gempy.org/>
+-   <https://www.gempy.org/>
 
 ### Installation options
 
@@ -74,4 +86,4 @@ a Google account is required to access Colab.
 
 #### Local installation
 
-- See: <https://docs.gempy.org/installation.html#>
+-   See: <https://docs.gempy.org/installation.html#>
