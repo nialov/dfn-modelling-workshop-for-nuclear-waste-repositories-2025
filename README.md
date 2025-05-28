@@ -24,8 +24,6 @@ To install `miniforge` using `winget`, if available:
 winget install CondaForge.Miniforge3 --source winget
 ~~~
 
-However, WSL is recommended, as support on Windows is limited on many software.
-
 ### Google Colab
 
 A Google account is require to access Google Colab
@@ -41,6 +39,10 @@ provides many features and plugins to help working with coding environments.
 See <https://code.visualstudio.com/> for installation instructions.
 
 ## OpenGeoSys and porepy
+
+`OpenGeoSys` can be installed on Windows natively. However, `porepy` cannot be.
+Consequently, a WSL installation is recommended or installation in a `conda`
+environment can be attempted.
 
 -   <https://www.opengeosys.org/docs/userguide/basics/5-mins-ogs/>
 -   <https://github.com/pmgbergen/porepy>
