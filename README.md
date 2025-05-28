@@ -7,7 +7,7 @@
 It is recommended to have a Linux environment available for installation
 of software. On Windows, you can enable and install Windows Subsystem
 for Linux (WSL), see <https://learn.microsoft.com/en-us/windows/wsl/install>
-for instructions. The default Ubuntu distribution is fine.
+for instructions. The default Ubuntu distribution is fine to use.
 
 ### Conda
 
@@ -15,24 +15,32 @@ Installation of (some) software is also possible using `conda` on
 Windows. See:
 <https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html>.
 
-To install `miniforge` using `winget`:
-
-### Google Colab
-
-A Google account is require to access Google Colab
-(<https://colab.research.google.com/>) which can be used as a cloud computing
-platform for scientific (Python) applications.
+To install `miniforge` using `winget`, if available:
 
 ~~~powershell
 winget install CondaForge.Miniforge3 --source winget
 ~~~
 
-However, WSL is recommended.
+However, WSL is recommended, as support on Windows is limited on many software.
+
+### Google Colab
+
+A Google account is require to access Google Colab
+(<https://colab.research.google.com/>) which can be used as a cloud computing
+platform for scientific (Python) applications. Using Colab circumvents the need
+to install software on your own devices but might be limited in computing power,
+storage and interactivity.
+
+### Software development environment (SDE)
+
+Interacting with code is best done in a code editor. Visual Studio Code
+provides many features and plugins to help working with coding environments.
+See <https://code.visualstudio.com/> for installation instructions.
 
 ## OpenGeoSys and porepy
 
--  <https://www.opengeosys.org/docs/userguide/basics/5-mins-ogs/>
--  <https://github.com/pmgbergen/porepy>
+-   <https://www.opengeosys.org/docs/userguide/basics/5-mins-ogs/>
+-   <https://github.com/pmgbergen/porepy>
 
 ### Installation options
 
