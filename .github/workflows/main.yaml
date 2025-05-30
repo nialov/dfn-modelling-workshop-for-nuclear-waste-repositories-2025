@@ -1,0 +1,57 @@
+jobs:
+  nix-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: DeterminateSystems/nix-installer-action@v9
+    - continue-on-error: true
+      uses: cachix/cachix-action@v14
+      with:
+        name: nialov
+    - uses: DeterminateSystems/nix-installer-action@v9
+    - name: Check flake
+      run: nix -Lv flake check --no-build
+    - name: Evaluate and build checks faster
+      run: nix run .#nix-fast-build-ci
+    timeout-minutes: 60
+  pip-install-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: sudo apt-get update && sudo apt-get install -y build-essential libglu1-mesa
+        libxrender1 libxcursor1 libxft2 libxinerama1 ffmpeg libsm6 libxext6
+    - uses: actions/setup-python@v5
+      with:
+        cache: pip
+        python-version: '3.12'
+    - name: Change working directory to ./fractopo_to_porepy_and_opengeosys/
+      run: cd ./fractopo_to_porepy_and_opengeosys/
+    - name: Install dependencies
+      run: pip install --requirement requirements.txt
+    - name: Test importing installed packages
+      run: python3 -c 'import fractopo; import porepy; import ogstools; import ogs'
+    - name: Test script
+      run: python3 generate_fracture_parameters.py
+    timeout-minutes: 60
+  uv-install-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: sudo apt-get update && sudo apt-get install -y build-essential libglu1-mesa
+        libxrender1 libxcursor1 libxft2 libxinerama1 ffmpeg libsm6 libxext6
+    - uses: astral-sh/setup-uv@v6
+      with:
+        enable-cache: true
+    - name: Change working directory to ./fractopo_to_porepy_and_opengeosys/
+      run: cd ./fractopo_to_porepy_and_opengeosys/
+    - name: Install dependencies
+      run: uv sync
+    - name: Test importing installed packages
+      run: uv run python3 -c 'import fractopo; import porepy; import ogstools; import
+        ogs'
+    - name: Test script
+      run: python3 generate_fracture_parameters.py
+    timeout-minutes: 60
+'on':
+  push: {}
+  workflow_dispatch: {}
