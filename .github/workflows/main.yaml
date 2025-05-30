@@ -52,7 +52,7 @@ jobs:
       run: uv run python3 -c 'import fractopo; import porepy; import ogstools; import
         ogs'
     - name: Test script
-      run: python3 generate_fracture_parameters.py
+      run: uv run python3 generate_fracture_parameters.py
     timeout-minutes: 60
 'on':
   push: {}
