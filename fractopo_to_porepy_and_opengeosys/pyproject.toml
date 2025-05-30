@@ -1,0 +1,47 @@
+[project]
+name = "dfn-porepy"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fractopo>=0.8.0",
+    "jupyterlab>=4.4.2",
+    "jupytext>=1.17.1",
+    "ogstools[ogs]>=0.6.0",
+    "porepy",
+]
+
+[tool.uv.sources]
+porepy = { git = "https://github.com/pmgbergen/porepy.git" }
+
+# Less strict basedpyright type checking:
+[tool.basedpyright]
+typeCheckingMode = "off"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+lint.select = [
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "W",    # pycodestyle warnings
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "A",    # flake8-builtins
+    "C4",   # flake8-comprehensions
+    "T20",  # flake8-print
+    "SIM",  # flake8-simplify
+]
+lint.ignore = [
+    "E501",  # line too long (handled by black or personal preference)
+]
+lint.exclude = [
+    ".git",
+    ".venv",
+    "build",
+    "dist",
+    "__pycache__",
+]
