@@ -95,6 +95,7 @@
               ];
             };
             "uv-install-check" = {
+              defaults.run.working-directory = "./fractopo_to_porepy_and_opengeosys/";
               steps = [
                 checkoutStep
                 installGmshDeps
@@ -106,6 +107,7 @@
               ];
             };
             "pip-install-check" = {
+              defaults.run.working-directory = "./fractopo_to_porepy_and_opengeosys/";
               steps = [
                 checkoutStep
                 installGmshDeps

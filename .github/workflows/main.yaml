@@ -15,6 +15,9 @@ jobs:
       run: nix run .#nix-fast-build-ci
     timeout-minutes: 60
   pip-install-check:
+    defaults:
+      run:
+        working-directory: ./fractopo_to_porepy_and_opengeosys/
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -34,6 +37,9 @@ jobs:
       run: python3 generate_fracture_parameters.py
     timeout-minutes: 60
   uv-install-check:
+    defaults:
+      run:
+        working-directory: ./fractopo_to_porepy_and_opengeosys/
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
