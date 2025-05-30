@@ -46,10 +46,6 @@
             "sudo apt-get install -y build-essential libglu1-mesa libxrender1 libxcursor1 libxft2 libxinerama1 ffmpeg libsm6 libxext6"
           ];
         };
-        changeWorkdir = {
-          name = "Change working directory to ./fractopo_to_porepy_and_opengeosys/";
-          run = "cd ./fractopo_to_porepy_and_opengeosys/";
-        };
         uvInstall = {
           name = "Install dependencies";
           run = "uv sync";
@@ -100,7 +96,6 @@
                 checkoutStep
                 installGmshDeps
                 uvSetupStep
-                changeWorkdir
                 uvInstall
                 uvTestImport
                 testScript
@@ -112,7 +107,6 @@
                 checkoutStep
                 installGmshDeps
                 pipSetup
-                changeWorkdir
                 pipInstall
                 pipTestImport
                 testScript

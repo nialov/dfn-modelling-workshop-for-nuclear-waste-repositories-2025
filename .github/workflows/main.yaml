@@ -27,8 +27,6 @@ jobs:
       with:
         cache: pip
         python-version: '3.12'
-    - name: Change working directory to ./fractopo_to_porepy_and_opengeosys/
-      run: cd ./fractopo_to_porepy_and_opengeosys/
     - name: Install dependencies
       run: pip install --requirement requirements.txt
     - name: Test importing installed packages
@@ -48,8 +46,6 @@ jobs:
     - uses: astral-sh/setup-uv@v6
       with:
         enable-cache: true
-    - name: Change working directory to ./fractopo_to_porepy_and_opengeosys/
-      run: cd ./fractopo_to_porepy_and_opengeosys/
     - name: Install dependencies
       run: uv sync
     - name: Test importing installed packages
