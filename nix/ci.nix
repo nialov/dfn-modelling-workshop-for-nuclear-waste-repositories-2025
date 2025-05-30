@@ -50,9 +50,8 @@
           name = "Install dependencies";
           run = "uv sync";
         };
-        uvTestImport = {
-          name = "Test importing installed packages";
-          run = "uv run python3 -c 'import fractopo; import porepy; import ogstools; import ogs'";
+        uvTestImport = pipTestImport // {
+          run = "uv run ${pipTestImport.run}";
         };
 
         pipSetup = {
@@ -73,6 +72,9 @@
         testScript = {
           name = "Test script";
           run = "python3 generate_fracture_parameters.py";
+        };
+        uvTestScript = testScript // {
+          run = "uv run ${testScript.run}";
         };
 
       in
@@ -98,7 +100,7 @@
                 uvSetupStep
                 uvInstall
                 uvTestImport
-                testScript
+                uvTestScript
               ];
             };
             "pip-install-check" = {
