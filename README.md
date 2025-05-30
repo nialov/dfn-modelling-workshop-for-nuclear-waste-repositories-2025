@@ -49,6 +49,15 @@ environment can be attempted.
 
 ### Installation options
 
+If attempting a native installation on Ubuntu (e.g. in WSL), you will need to
+install some system packages for ``gmsh``, which is a dependency of
+``porepy``, if they are not installed already.
+
+~~~bash
+sudo apt-get update
+sudo apt-get install -y build-essential libglu1-mesa libxrender1 libxcursor1 libxft2 libxinerama1 ffmpeg libsm6 libxext6
+~~~
+
 #### pip
 
 It is recommended to create a virtual environment for `pip`
@@ -84,6 +93,15 @@ conda install -c conda-forge -n opengeosys-porepy ogstools jupyterlab
 conda activate opengeosys-porepy
 # Install porepy (which is not available on conda-forge)
 pip install git+https://github.com/pmgbergen/porepy.git@76d11493e7c62269d03406bd736e1ddded85b517
+~~~
+
+### Testing installation
+
+After installing the required packages, you can run the following command to
+perform an initial test that everything is set up correctly:
+
+~~~bash
+python3 -c "import ogstools; import porepy; import ogs"
 ~~~
 
 ## GemPy
