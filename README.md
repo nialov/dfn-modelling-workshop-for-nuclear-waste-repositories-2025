@@ -58,7 +58,7 @@ sudo apt-get update
 sudo apt-get install -y build-essential libglu1-mesa libxrender1 libxcursor1 libxft2 libxinerama1 ffmpeg libsm6 libxext6
 ~~~
 
-#### pip
+#### pip (if you have WSL installed, follow this)
 
 It is recommended to create a virtual environment for `pip`
 installation.
@@ -77,7 +77,7 @@ To activate environment:
 source .venv/bin/activate
 ~~~
 
-#### conda
+#### conda (if you have WSL installed, use the pip instructions above and skip this)
 
 It is recommended to create a new `conda` environment for
 `conda` installation.
