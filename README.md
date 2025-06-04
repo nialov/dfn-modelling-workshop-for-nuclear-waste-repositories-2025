@@ -104,6 +104,10 @@ perform an initial test that everything is set up correctly:
 python3 -c "import ogstools; import porepy; import ogs"
 ~~~
 
+### Material for Hackathon
+
+-  <https://github.com/nagelt/DFN_OGS>
+
 ## GemPy
 
 -   <https://www.gempy.org/>
