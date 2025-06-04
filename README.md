@@ -130,6 +130,7 @@ a Google account is required to access Colab.
 ### Run using Binder
 
 Just click link below to start an interactive notebook environment
-provided by <https://mybinder.org>.
+provided by <https://mybinder.org>, however the environment can not completely
+run the notebook.
 
 -   <https://mybinder.org/v2/gh/nialov/gempy-notebook-repo-2025-06-04/2ad98b316e91be70be66a98cb4e5dac44d0d4eb6?urlpath=lab%2Ftree%2FModeling_exmple_EGU25.ipynb>
