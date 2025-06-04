@@ -88,7 +88,7 @@ conda env create -n opengeosys-porepy
 
 ~~~bash
 # Install
-conda install -c conda-forge -n opengeosys-porepy ogstools jupyterlab
+conda install -c conda-forge -n opengeosys-porepy ogstools jupyterlab ogs
 # Activate
 conda activate opengeosys-porepy
 # Install porepy (which is not available on conda-forge)
