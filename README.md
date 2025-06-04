@@ -122,3 +122,7 @@ a Google account is required to access Colab.
 #### Local installation
 
 -   See: <https://docs.gempy.org/installation.html#>
+
+### Material
+
+-  <https://github.com/cgre-aachen/egu25_gempy_workshop>
