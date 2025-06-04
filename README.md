@@ -12,7 +12,7 @@ of software. On Windows, you can enable and install Windows Subsystem
 for Linux (WSL), see <https://learn.microsoft.com/en-us/windows/wsl/install>
 for instructions. The default Ubuntu distribution is fine to use.
 
-### Conda
+### Conda (use if you can not get WSL installed)
 
 Installation of (some) software is also possible using `conda` on
 Windows. See:
