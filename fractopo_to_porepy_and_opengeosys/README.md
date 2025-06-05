@@ -9,6 +9,12 @@ described in the main `README.md`.
 For more information, see the official repository:
 <https://github.com/nialov/fractopo>
 
+You can also check out "easy-to-use" web interfaces to general `fractopo`
+functionality, i.e., validation of trace data and subsequent analysis at:
+
+-  <https://safer-flop-fractopo-network.2.rahtiapp.fi/>
+-  <https://safer-flop-fractopo-validation.2.rahtiapp.fi/>
+
 ## Using `pip` (use this if you had WSL installed and you used pip to install OpenGeoSys)
 
 If you are using a virtual environment, activate it first (if not
