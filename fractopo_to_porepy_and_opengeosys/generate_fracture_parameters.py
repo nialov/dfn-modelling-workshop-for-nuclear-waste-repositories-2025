@@ -106,10 +106,10 @@ def visualize_input_data(traces_gdf, area_gdf, output_path) -> None:
 def main(
     add_only_known_fractures: Annotated[
         bool, typer.Option(help="Only add fractures with known dip and dip direction")
-    ] = True,
+    ] = False,
     max_fractures: Annotated[
         int, typer.Option(help="Maximum number of fractures to add")
-    ] = 50,
+    ] = 100,
 ) -> None:
     """
     Generate fracture parameters from trace and area GeoJSON files.
